@@ -4,12 +4,15 @@
 
 @theme {
   --primary: #ff9671;
+  --accent: #555555;
+  --background: #f5f5f5;
 
-  --font-main: "Zen Maru Gothic", system-ui, Arial, Helvetica, 'Courier New', Courier, monospace;
+  --font-main: "LXGW WenKai TC", system-ui, Arial, Helvetica, 'Courier New', Courier, monospace;
   --font-title: ChenYuluoyan, system-ui, Arial, Helvetica, 'Courier New', Courier, monospace;
   --font-pearl: FakePearl, system-ui, Arial, Helvetica, 'Courier New', Courier, monospace;
 
   --color-primary: var(--primary);
+  --color-background: var(--background);
 }
 
 @font-face {
