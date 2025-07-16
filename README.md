@@ -59,7 +59,7 @@ npm run build
 本專案採用檔案式路由，核心邏輯位於 `src/pages` 目錄：
 
 -   `src/pages/index.vue` -> `/`
--   `src/pages/gallery.vue` -> `/gallery`
+-   `src/pages/playground.vue` -> `/playground`
 -   `src/pages/[...slug].vue` -> 處理所有未匹配的路由 (404 頁面)
 
 您只需要專注於在 `src/pages` 中建立頁面元件，路由系統會自動處理其餘部分。

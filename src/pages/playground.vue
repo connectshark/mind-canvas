@@ -85,7 +85,7 @@ const getAllModels = async () => {
 
 onMounted(async () => {
   await getAllModels()
-  model.value = models.value[0]
+  if (models.value?.length) model.value = models.value[0]
 })
 
 </script>
