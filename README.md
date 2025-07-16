@@ -7,7 +7,7 @@
 ![https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)
 ![https://img.shields.io/badge/tailwindcss-35495E?style=for-the-badge&logo=tailwindcss&logoColor=38BCF8](https://img.shields.io/badge/tailwindcss-35495E?style=for-the-badge&logo=tailwindcss&logoColor=38BCF8)
 
-**Mind Canvas** 是一個現代化的 Vue 3 前端開發模板，旨在提供開發者一個高效、功能完備的起點。專案整合了最新的前端技術，包含 Vite 5、Pinia、Vue Router 4 和 Tailwind CSS 4，並預先設定了自動化部署流程，讓您能專注於打造出色的應用程式。
+**Mind Canvas** 是一個現代化的 Vue 3 前端開發模板，旨在提供開發者一個高效、功能完備的起點。專案整合了最新的前端技術，包含 Vite 7、Pinia、Vue Router 4 和 Tailwind CSS 4，並預先設定了自動化部署流程，讓您能專注於打造出色的應用程式。
 
 ## ✨ 功能特性
 
@@ -16,8 +16,7 @@
 - **⚡️ 高速開發體驗**: 採用 [Vite](https://vitejs.dev/) 作為建置工具，提供閃電般的熱模組替換 (HMR) 和極速的啟動時間。
 - **🔩 最新 Vue 生態**: 基於 [Vue 3](https://vuejs.org/)，並整合了官方的狀態管理工具 [Pinia](https://pinia.vuejs.org/) 和路由管理 [Vue Router](https://router.vuejs.org/)。
 - **🎨 檔案式路由**: 透過 `unplugin-vue-router` 實現，您只需要在 `src/pages` 目錄下建立 `.vue` 檔案，路由就會自動產生，無需手動設定。
-- **💅 強大的樣式工具**: 內建 [Tailwind CSS 4](https://tailwindcss.com/)，提供高效的 Utility-First CSS 框架，並可透過 `tailwind.config.js` 輕鬆客製化。
-- **🚀 自動化部署**: 預設設定了 GitHub Actions，當您推送程式碼到 `main` 分支時，會自動將專案建置並部署到 GitHub Pages。
+- **💅 強大的樣式工具**: 內建 [Tailwind CSS 4](https://tailwindcss.com/)，提供高效的 Utility-First CSS 框架。
 - **🛠️ 開發者工具**: 整合 `vite-plugin-vue-devtools`，提供強大的 Vue 開發者工具，方便您在開發過程中進行偵錯。
 
 ## 🚀 快速上手
@@ -50,7 +49,7 @@
 若要建置用於生產環境的靜態檔案，請執行：
 
 ```bash
-pnpm build
+npm run build
 ```
 
 建置後的檔案會存放在 `dist` 目錄下。

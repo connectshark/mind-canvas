@@ -54,22 +54,33 @@ const model = ref('')
 
 const loading = ref(false)
 const result = ref('')
+const API_DOMAIN = import.meta.env.VITE_API_IMAGE_URL
+
 const generateImage = async () => {
   loading.value = true
   result.value = ''
-  const response = await fetch(`https://image.pollinations.ai/prompt/${ prompt.value }&model=${ model.value }&safe=false`)
-  const blob = await response.blob()
-  const url = URL.createObjectURL(blob)
-  result.value = url
-  loading.value = false
+  try {
+    const response = await fetch(API_DOMAIN + `/prompt/${ prompt.value }?model=${ model.value }&safe=false`)
+    const blob = await response.blob()
+    const url = URL.createObjectURL(blob)
+    result.value = url
+  } catch (error) {
+    console.error(error)
+  } finally {
+    loading.value = false
+  }
 }
 
 const models = ref([])
 
 const getAllModels = async () => {
-  const response = await fetch('https://image.pollinations.ai/models')
-  const data = await response.json()
-  models.value = data
+  try {
+    const response = await fetch(API_DOMAIN + '/models')
+    const data = await response.json()
+    models.value = data.models
+  } catch (error) {
+    console.error(error)
+  }
 }
 
 onMounted(async () => {
