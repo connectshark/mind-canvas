@@ -9,9 +9,9 @@
           Mind Canvas 是一款視覺化協作平台，將您的靈感、想法和專案匯集於一處。從腦力激盪到專案管理，我們助您化繁為簡。
         </p>
         <div class="mt-10">
-          <a href="#" class="px-8 py-4 font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg transition-colors shadow-[0_0_20px_rgba(99,102,241,0.5)]">
+          <router-link to="/chat" class="px-8 py-4 font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg transition-colors shadow-[0_0_20px_rgba(99,102,241,0.5)]">
             立即開始，完全免費
-          </a>
+          </router-link>
         </div>
       </section>
 

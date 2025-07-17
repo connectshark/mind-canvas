@@ -8,7 +8,18 @@ import tailwindcss from '@tailwindcss/vite'
 
 /** @type {import('vite').UserConfig} */
 export default defineConfig({
-  plugins: [vue(), VueRouter(), VueDevTools(), tailwindcss()],
+  plugins: [
+    VueRouter({
+      importMode: (filepath) => {
+        const keywords = ['index'];
+        const res = keywords.some(key => filepath.includes(key))
+        return res ? 'sync' : 'async'
+      },
+    }),
+    vue(),
+    VueDevTools(),
+    tailwindcss()
+  ],
   server: {
     port: 8080
   },

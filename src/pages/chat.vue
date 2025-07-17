@@ -39,6 +39,7 @@ const defaultSystem = {
   role : 'system',
   content: '用繁體中文回覆'
 }
+const API_CHAT_URL = import.meta.env.VITE_API_CHAT_URL
 const loading = ref(false)
 const submitMsg = async () => {
   loading.value = true
@@ -47,15 +48,14 @@ const submitMsg = async () => {
     content: prompt.value
   })
   prompt.value = ''
-  const response = await fetch('https://text.pollinations.ai/openai', {
+  const response = await fetch(API_CHAT_URL + '/openai', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      model: 'openai',
-      messages: [defaultSystem, ...messages.value],
-      temperature: 0.7
+      model: 'gpt-4.1',
+      messages: [defaultSystem, ...messages.value]
     })
   })
   const data = await response.json()
@@ -63,7 +63,6 @@ const submitMsg = async () => {
     role: 'assistant',
     content: data.choices[0].message.content
   })
-  console.log(data)
   loading.value = false
 }
 

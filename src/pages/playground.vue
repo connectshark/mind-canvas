@@ -33,7 +33,6 @@
           </div>
         </div>
 
-        <!-- Image Display -->
         <div class="md:col-span-2">
           <div class="bg-white/5 p-4 rounded-xl border border-white/10 shadow-lg backdrop-blur-lg h-full">
             <img class="w-full h-full object-contain" v-if="result" :src="result" alt="ai image">
@@ -77,7 +76,7 @@ const getAllModels = async () => {
   try {
     const response = await fetch(API_DOMAIN + '/models')
     const data = await response.json()
-    models.value = data.models
+    models.value = data
   } catch (error) {
     console.error(error)
   }
