@@ -1,11 +1,13 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @theme {
   --primary: #ff9671;
   --accent: #555555;
-  --background: #0A0A0A;
+  --background: #0e060b;
+  --text: #f7eef2;
 
   --font-main: "LXGW WenKai TC", system-ui, Arial, Helvetica, 'Courier New', Courier, monospace;
   --font-title: ChenYuluoyan, system-ui, Arial, Helvetica, 'Courier New', Courier, monospace;
@@ -13,6 +15,7 @@
 
   --color-primary: var(--primary);
   --color-background: var(--background);
+  --color-text: var(--text)
 }
 
 @font-face {

@@ -12,7 +12,7 @@
       </div>
       <nav class="hidden md:flex items-center space-x-8">
         <router-link class="text-sm text-gray-300 hover:text-white transition-colors" to="/playground">Playground</router-link>
-        <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors">定價</a>
+        <router-link to="/chat" class="text-sm text-gray-300 hover:text-white transition-colors">聊天</router-link>
         <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors">關於我們</a>
       </nav>
       <div class="flex items-center space-x-4">
