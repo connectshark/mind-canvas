@@ -22,7 +22,12 @@
             <p class="text-gray-400 leading-relaxed">{{ img.description }}</p>
           </div>
           <div class="w-1/2 bg-white/5 p-4 rounded-xl border border-white/10 shadow-lg backdrop-blur-lg">
-              <div :class="img.bg" class="aspect-video bg-gradient-to-br rounded-lg"></div>
+            <Suspense>
+              <ImageBlock/>
+              <template #fallback>
+                <div :class="img.bg" class="aspect-video bg-gradient-to-br rounded-lg animate-pulse" />
+              </template>
+            </Suspense>
           </div>
         </div>
       </section>
@@ -42,6 +47,7 @@
 </template>
 
 <script setup>
+import { ImageBlock } from '../components/base'
 const images = [
   {
     title: '無限畫布，無限可能',

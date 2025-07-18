@@ -54,7 +54,6 @@ const submitMsg = async () => {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      model: 'gpt-4.1',
       messages: messages.value
     })
   })
