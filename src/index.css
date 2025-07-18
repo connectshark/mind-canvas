@@ -14,7 +14,8 @@
 
   --color-primary: var(--primary);
   --color-background: var(--background);
-  --color-text: var(--text)
+  --color-text: var(--text);
+  --color-accent: var(--accent);
 }
 
 @font-face {

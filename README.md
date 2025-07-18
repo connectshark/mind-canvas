@@ -64,12 +64,6 @@ npm run build
 
 您只需要專注於在 `src/pages` 中建立頁面元件，路由系統會自動處理其餘部分。
 
-## 🌐 API 串接
-
-專案中已預留與 AI 圖像生成服務串接的空間，您可以參考以下服務來擴充功能：
-
--   [Pollinations.ai](https://pollinations.ai/)
-
 ## 📜 版權
 
 本專案採用 [MIT](/LICENSE) 授權。

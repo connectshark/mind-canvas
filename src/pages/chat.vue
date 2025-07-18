@@ -23,6 +23,9 @@
         <div v-if="loading" class="text-center">
           <i class="bx bx-loader-lines bx-spin bx-sm" />
         </div>
+        <div>
+          <p v-if="error" class="text-center">好像有些地方有出錯了！<button @click="reset" class="px-3 rounded-2xl cursor-pointer bg-accent hover:opacity-80" type="button"><i class='bx  bx-undo align-middle'></i> </button></p>
+        </div>
       </div>
     </div>
     <form @submit.prevent="submitMsg" class="py-3 flex justify-center gap-2 items-start w-11/12 mx-auto">
@@ -41,8 +44,10 @@ const messages = ref([
 
 const API_DOMAIN = import.meta.env.VITE_API_URL
 const loading = ref(false)
+const error = ref(false)
 const submitMsg = async () => {
   loading.value = true
+  error.value = false
   messages.value.push({
     role: 'user',
     content: prompt.value
@@ -57,6 +62,11 @@ const submitMsg = async () => {
       messages: messages.value
     })
   })
+  if (!response.ok) {
+    error.value = true
+    loading.value = false
+    return
+  }
   const data = await response.json()
   messages.value.push({
     role: 'assistant',
@@ -69,6 +79,11 @@ const talkContent = useTemplateRef('talk')
 onUpdated(() => {
   talkContent.value.scrollTop = talkContent.value.scrollHeight
 })
+
+const reset = () => {
+  messages.value = []
+  error.value = false
+}
 </script>
 
 <style scoped>
