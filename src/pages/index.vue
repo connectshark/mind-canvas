@@ -16,12 +16,12 @@
       </section>
 
       <section v-for="img in images" class=" group container mx-auto px-6 py-20">
-        <div class="flex items-center justify-center gap-12">
-          <div class="w-1/2 group-odd:order-1">
+        <div class="md:flex items-center justify-center gap-12">
+          <div class="md:w-1/2 group-odd:order-1 mb-4 md:mb-0">
             <h2 class="text-3xl font-bold text-white mb-4">{{ img.title }}</h2>
             <p class="text-gray-400 leading-relaxed">{{ img.description }}</p>
           </div>
-          <div class="w-1/2 bg-white/5 p-4 rounded-xl border border-white/10 shadow-lg backdrop-blur-lg">
+          <div class="md:w-1/2 bg-white/5 p-4 rounded-xl border border-white/10 shadow-lg backdrop-blur-lg">
             <Suspense>
               <ImageBlock/>
               <template #fallback>
