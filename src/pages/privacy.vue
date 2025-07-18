@@ -1,5 +1,5 @@
 <template>
-  <article class=" max-w-2xl mx-auto w-11/12 prose-strong:text-white text-white prose-headings:text-white  prose" v-html="article"></article>
+  <article class=" max-w-2xl mx-auto w-11/12 prose prose-invert" v-html="article"></article>
 </template>
 
 <script setup>

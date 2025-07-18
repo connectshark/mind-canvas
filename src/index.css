@@ -9,9 +9,8 @@
   --background: #0e060b;
   --text: #f7eef2;
 
-  --font-main: "LXGW WenKai TC", system-ui, Arial, Helvetica, 'Courier New', Courier, monospace;
-  --font-title: ChenYuluoyan, system-ui, Arial, Helvetica, 'Courier New', Courier, monospace;
-  --font-pearl: FakePearl, system-ui, Arial, Helvetica, 'Courier New', Courier, monospace;
+  --font-title: "LXGW WenKai TC", system-ui, Arial, Helvetica, 'Courier New', Courier, monospace;
+  --font-main: FakePearl, system-ui, Arial, Helvetica, 'Courier New', Courier, monospace;
 
   --color-primary: var(--primary);
   --color-background: var(--background);

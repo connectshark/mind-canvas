@@ -13,7 +13,7 @@
 <script setup>
 import { onUnmounted, ref } from 'vue'
 const list = ref([])
-const FEED_URL = import.meta.env.VITE_API_IMAGE_URL + '/feed'
+const FEED_URL = import.meta.env.VITE_API_URL + '/feed'
 const eventSource = new EventSource(FEED_URL)
 
 const pause = ref(false)
