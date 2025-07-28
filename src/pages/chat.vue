@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col bg-background text-text font-main max-w-3xl mx-auto">
-    <h1 class="text-xl/loose font-title w-4/5 mx-auto text-center">Mind Canvas 聊天室</h1>
+  <div class="flex flex-col bg-background text-text font-main max-w-3xl mx-auto p-4">
+    <h1 class="text-3xl/loose font-title w-4/5 mx-auto text-center text-primary">Mind Canvas 聊天室</h1>
 
     <div ref="talk" class="overflow-y-auto p-4 talk">
       <div class="space-y-4">
@@ -16,7 +16,7 @@
           <div v-else class="flex-shrink-0">
             <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center font-bold">A</div>
           </div>
-          <div class="w-4/5 p-4 rounded-lg bg-stone-900">
+          <div class="w-4/5 p-4 rounded-lg bg-secondary">
             <TextBlock :content="msg.content"/>
           </div>
         </div>
@@ -29,8 +29,8 @@
       </div>
     </div>
     <form @submit.prevent="submitMsg" class="py-3 flex justify-center gap-2 items-start w-11/12 mx-auto">
-      <textarea v-model.trim="prompt" id="prompt" required name="prompt" rows="2" class=" w-full bg-white/10 appearance-none border border-white/20 rounded-lg p-3 text-white placeholder-gray-500 resize-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="輸入與AI的對話..."></textarea>
-      <button type="submit" class="shrink-0 cursor-pointer p-3 text-white bg-primary rounded-lg">送出</button>
+      <textarea v-model.trim="prompt" id="prompt" required name="prompt" rows="2" class=" w-full bg-background/80 appearance-none border border-primary/20 rounded-lg p-3 text-text placeholder-text/60 resize-none focus:ring-primary focus:border-primary" placeholder="輸入與AI的對話..."></textarea>
+      <button type="submit" class="shrink-0 cursor-pointer p-3 text-background bg-primary rounded-lg">送出</button>
     </form>
   </div>
 </template>

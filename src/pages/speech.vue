@@ -1,8 +1,8 @@
 <template>
   <h1 class=" text-4xl/loose py-10 text-center">SPEECH</h1>
   <form class=" w-5/6 mx-auto mb-20" @submit.prevent="submitHandler">
-    <label for="prompt" required class="block text-sm font-medium text-gray-400 mb-2">Prompt</label>
-    <textarea v-model.trim="prompt" id="prompt" name="prompt" rows="4" class="w-full bg-white/10 appearance-none border border-white/20 rounded-lg p-3 text-white placeholder-gray-500 resize-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="輸入您想生成的語音描述..."></textarea>
+    <label for="prompt" required class="block text-sm font-medium text-text/80 mb-2">Prompt</label>
+    <textarea v-model.trim="prompt" id="prompt" name="prompt" rows="4" class="w-full bg-background/80 appearance-none border border-primary/20 rounded-lg p-3 text-text placeholder-text/60 resize-none focus:ring-primary focus:border-primary" placeholder="輸入您想生成的語音描述..."></textarea>
     <div class=" text-center py-10">
       <button class=" bg-primary hover:opacity-80 p-2 rounded-2xl cursor-pointer" type="submit">送出文字</button>
     </div>
@@ -31,3 +31,11 @@ const submitHandler = async () => {
   loading.value = false
 }
 </script>
+<style scoped>
+[data-theme='light'] audio {
+  filter: invert(0);
+}
+[data-theme='dark'] audio {
+  filter: invert(1);
+}
+</style>
