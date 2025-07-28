@@ -1,14 +1,14 @@
 <template>
-  <div class="bg-[#0A0A0A] text-gray-300 min-h-screen">
+  <div class="min-h-screen">
     <div class="container mx-auto px-6 py-12">
       <div class="grid md:grid-cols-3 gap-12">
-        <div class="md:col-span-1 bg-white/5 p-6 rounded-xl border border-white/10 shadow-lg backdrop-blur-lg">
+        <div class="md:col-span-1 p-6 rounded-xl border border-text/10 bg-text text-background shadow-lg backdrop-blur-lg">
           <h2 class="text-2xl font-bold mb-6 text-center">Playground</h2>
           
           <form @submit.prevent="generateImage" class="space-y-6">
             <div>
-              <label for="prompt" class="block text-sm font-medium text-gray-400 mb-2">Prompt</label>
-              <textarea required v-model.trim="prompt" id="prompt" name="prompt" rows="4" class="w-full bg-white/10 appearance-none border border-white/20 rounded-lg p-3 text-white placeholder-gray-500 resize-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="輸入您想生成的圖片描述..."></textarea>
+              <label for="prompt" class="block text-sm font-medium text-text-400 mb-2">Prompt</label>
+              <textarea required v-model.trim="prompt" id="prompt" name="prompt" rows="4" class="w-full bg-white/10 appearance-none border border-text/20 rounded-lg p-3 placeholder-gray-500 resize-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="輸入您想生成的圖片描述..."></textarea>
             </div>
 
             <div>
@@ -32,13 +32,13 @@
         </div>
 
         <div class="md:col-span-2">
-          <div class="bg-white/5 p-4 rounded-xl border border-white/10 shadow-lg backdrop-blur-lg h-full">
+          <div class="bg-text p-4 rounded-xl border border-text/10 shadow-lg backdrop-blur-lg h-full">
             <img class="w-full h-full object-contain" v-if="result" :src="result" alt="ai image">
             <div v-else-if="loading" class=" flex items-center justify-center h-full">
               <i class="bx bx-loader-lines bx-spin bx-sm" />
             </div>
-            <div v-else class="aspect-square bg-gradient-to-br from-purple-500/10 to-blue-500/10 rounded-lg flex items-center justify-center">
-              <p class="text-gray-500">圖片生成結果將顯示於此</p>
+            <div v-else class="aspect-square bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center">
+              <p class="text-text/60">圖片生成結果將顯示於此</p>
             </div>
           </div>
         </div>

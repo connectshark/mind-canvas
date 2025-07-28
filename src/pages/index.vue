@@ -1,11 +1,11 @@
 <template>
-  <div class="bg-[#0A0A0A] text-gray-300">
+  <div class="">
     <div class="pt-32">
       <section class="text-center container mx-auto px-6 py-24">
         <h1 class="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 leading-tight">
           釋放您的無限創造力
         </h1>
-        <p class="mt-6 text-lg text-gray-400 max-w-2xl mx-auto">
+        <p class="mt-6 text-lg text-text/80 max-w-2xl mx-auto">
           Mind Canvas 是一款視覺化協作平台，將您的靈感、想法和專案匯集於一處。從腦力激盪到專案管理，我們助您化繁為簡。
         </p>
         <div class="mt-10">
@@ -18,10 +18,10 @@
       <section v-for="img in images" class=" group container mx-auto px-6 py-20">
         <div class="md:flex items-center justify-center gap-12">
           <div class="md:w-1/2 group-odd:order-1 mb-4 md:mb-0">
-            <h2 class="text-3xl font-bold text-white mb-4">{{ img.title }}</h2>
-            <p class="text-gray-400 leading-relaxed">{{ img.description }}</p>
+            <h2 class="text-3xl font-bold mb-4">{{ img.title }}</h2>
+            <p class=" text-text/80 leading-relaxed">{{ img.description }}</p>
           </div>
-          <div class="md:w-1/2 bg-white/5 p-4 rounded-xl border border-white/10 shadow-lg backdrop-blur-lg">
+          <div class="md:w-1/2 bg-background/50 p-4 rounded-xl border border-text/10 shadow-lg backdrop-blur-lg">
             <Suspense>
               <ImageBlock/>
               <template #fallback>
@@ -33,8 +33,8 @@
       </section>
 
       <section class="container mx-auto px-6 py-24 text-center">
-          <h2 class="text-4xl font-bold text-white">準備好改變您的工作方式了嗎？</h2>
-          <p class="mt-4 text-lg text-gray-400">立即加入，探索視覺化協作的全新境界。</p>
+          <h2 class="text-4xl font-bold">準備好改變您的工作方式了嗎？</h2>
+          <p class="mt-4 text-lg text-text/80">立即加入，探索視覺化協作的全新境界。</p>
           <div class="mt-8">
             <router-link to="/chat" class="px-8 py-4 font-semibold bg-primary hover:opacity-80 transition-opacity rounded-2xl text-background">
               立即開始，完全免費
