@@ -36,25 +36,20 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, watch } from 'vue'
 
 const pages = [
   { path: '/privacy', name: 'privacy' }
 ]
 
-const theme = ref('dark')
+const theme = ref(localStorage.getItem('theme') || 'dark')
 
 const toggleTheme = () => {
   theme.value = theme.value === 'dark' ? 'light' : 'dark'
-  document.documentElement.setAttribute('data-theme', theme.value)
-  localStorage.setItem('theme', theme.value)
 }
 
-onMounted(() => {
-  const savedTheme = localStorage.getItem('theme')
-  if (savedTheme) {
-    theme.value = savedTheme
-    document.documentElement.setAttribute('data-theme', savedTheme)
-  }
-})
+watch(theme, (newTheme) => {
+  document.documentElement.setAttribute('data-theme', newTheme)
+  localStorage.setItem('theme', newTheme)
+}, { immediate: true })
 </script>
