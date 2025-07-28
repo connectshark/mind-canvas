@@ -8,9 +8,7 @@
         </router-link>
       </div>
       <nav class="hidden md:flex items-center gap-2">
-        <router-link class="text-sm text-text/80 hover:text-text transition-colors" to="/playground">Playground</router-link>
-        <router-link to="/chat" class="text-sm text-text/80 hover:text-text transition-colors">聊天</router-link>
-        <router-link to="/speech" class="text-sm text-text/80 hover:text-text transition-colors">speech</router-link>
+        <router-link v-for="menu in menus" class="text-sm text-text/80 hover:text-text transition-colors" :to="menu.path">{{ menu.name }}</router-link>
         <button @click="toggleTheme" class="text-sm cursor-pointer text-text/80 hover:text-text transition-colors">
           <i v-if="theme === 'light'" class='bx bx-sm bx-sun-dim align-middle'></i>
           <i v-else class='bx bx-sm bx-moon-star align-middle'></i>
@@ -18,15 +16,14 @@
       </nav>
       <div class="md:hidden">
         <button @click="isMenuOpen = !isMenuOpen" class="text-sm cursor-pointer text-text/80 hover:text-text transition-colors">
-          <i class='bx bx-sm bx-menu'  ></i> 
+          <i v-if="isMenuOpen" class='bx bx-sm bx-x'></i> 
+          <i v-else class='bx bx-sm bx-menu'></i> 
         </button>
       </div>
     </div>
     <div v-if="isMenuOpen" class="md:hidden">
       <nav class="flex flex-col items-center gap-2 py-4">
-        <router-link class="text-sm text-text/80 hover:text-text transition-colors" to="/playground">Playground</router-link>
-        <router-link to="/chat" class="text-sm text-text/80 hover:text-text transition-colors">聊天</router-link>
-        <router-link to="/speech" class="text-sm text-text/80 hover:text-text transition-colors">speech</router-link>
+        <router-link v-for="menu in menus" class="text-sm text-text/80 hover:text-text transition-colors" :to="menu.path">{{ menu.name }}</router-link>
         <button @click="toggleTheme" class="text-sm cursor-pointer text-text/80 hover:text-text transition-colors">
           <i v-if="theme === 'light'" class='bx bx-sm bx-sun-dim align-middle'></i>
           <i v-else class='bx bx-sm bx-moon-star align-middle'></i>
@@ -53,6 +50,12 @@
 
 <script setup>
 import { ref, watch } from 'vue'
+
+const menus = [
+  { path: '/playground', name: 'playground' },
+  { path: '/chat', name: 'chat' },
+  { path: '/speech', name: 'speech' }
+]
 
 const isMenuOpen = ref(false)
 
