@@ -18,6 +18,13 @@
   --color-accent: var(--accent);
 }
 
+@theme (variant:light) {
+  --primary: #ff9671;
+  --accent: #eeeeee;
+  --background: #f7eef2;
+  --text: #0e060b;
+}
+
 @font-face {
   font-family: FakePearl;
   src: url(https://cdn.jsdelivr.net/gh/max32002/FakePearl@1.1/webfont/FakePearl-ExtraLight.woff2) format("woff2")

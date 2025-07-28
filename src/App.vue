@@ -11,6 +11,9 @@
         <router-link class="text-sm text-gray-300 hover:text-white transition-colors" to="/playground">Playground</router-link>
         <router-link to="/chat" class="text-sm text-gray-300 hover:text-white transition-colors">聊天</router-link>
         <router-link to="/speech">speech</router-link>
+        <button @click="toggleTheme" class="text-sm text-gray-300 hover:text-white transition-colors">
+          切換主題
+        </button>
       </nav>
     </div>
   </header>
@@ -32,7 +35,25 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from 'vue'
+
 const pages = [
   { path: '/privacy', name: 'privacy' }
 ]
+
+const theme = ref('dark')
+
+const toggleTheme = () => {
+  theme.value = theme.value === 'dark' ? 'light' : 'dark'
+  document.documentElement.setAttribute('data-theme', theme.value)
+  localStorage.setItem('theme', theme.value)
+}
+
+onMounted(() => {
+  const savedTheme = localStorage.getItem('theme')
+  if (savedTheme) {
+    theme.value = savedTheme
+    document.documentElement.setAttribute('data-theme', savedTheme)
+  }
+})
 </script>
