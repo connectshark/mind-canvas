@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col bg-background text-text font-main max-w-3xl mx-auto">
-    <h1 class="text-xl/loose font-title w-4/5 mx-auto text-center">Mind Canvas 聊天室</h1>
+  <div class="flex flex-col bg-background text-text font-main max-w-3xl mx-auto p-4">
+    <h1 class="text-3xl/loose font-title w-4/5 mx-auto text-center text-primary">Mind Canvas 聊天室</h1>
 
     <div ref="talk" class="overflow-y-auto p-4 talk">
       <div class="space-y-4">
@@ -16,7 +16,7 @@
           <div v-else class="flex-shrink-0">
             <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center font-bold">A</div>
           </div>
-          <div class="w-4/5 p-4 rounded-lg bg-primary/10">
+          <div class="w-4/5 p-4 rounded-lg bg-secondary">
             <TextBlock :content="msg.content"/>
           </div>
         </div>

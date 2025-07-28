@@ -4,25 +4,28 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @theme {
-  --primary: #ff9671;
-  --accent: #555555;
-  --background: #0e060b;
-  --text: #f7eef2;
+  --text: #0f0a09;
+  --background: #fcfbfa;
+  --primary: #ff9670;
+  --secondary: #bcc9a0;
+  --accent: #8bb57e;
 
   --font-title: "LXGW WenKai TC", system-ui, Arial, Helvetica, 'Courier New', Courier, monospace;
   --font-main: FakePearl, system-ui, Arial, Helvetica, 'Courier New', Courier, monospace;
 
   --color-primary: var(--primary);
   --color-background: var(--background);
+  --color-secondary: var(--secondary);
   --color-text: var(--text);
   --color-accent: var(--accent);
 }
 
 [data-theme="dark"]  {
-  --primary: #ff9671;
-  --accent: #eeeeee;
-  --background: #f7eef2;
-  --text: #0e060b;
+  --text: #f7f3e8;
+  --background: #0b0a04;
+  --primary: #ff9670;
+  --secondary: #556525;
+  --accent: #709136;
 }
 
 @font-face {

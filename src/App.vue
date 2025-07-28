@@ -10,9 +10,10 @@
       <nav class="flex items-center gap-2">
         <router-link class="text-sm text-text/80 hover:text-text transition-colors" to="/playground">Playground</router-link>
         <router-link to="/chat" class="text-sm text-text/80 hover:text-text transition-colors">聊天</router-link>
-        <router-link to="/speech">speech</router-link>
-        <button @click="toggleTheme" class="text-sm text-text/80 hover:text-text transition-colors">
-          切換主題
+        <router-link to="/speech" class="text-sm text-text/80 hover:text-text transition-colors">speech</router-link>
+        <button @click="toggleTheme" class="text-sm cursor-pointer text-text/80 hover:text-text transition-colors">
+          <i v-if="theme === 'light'" class='bx bx-sm bx-sun-dim align-middle'></i>
+          <i v-else class='bx bx-sm bx-moon-star align-middle'></i>
         </button>
       </nav>
     </div>

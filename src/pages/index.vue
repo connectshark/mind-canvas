@@ -1,8 +1,8 @@
 <template>
-  <div class="">
+  <div class="container mx-auto px-4">
     <div class="pt-32">
       <section class="text-center container mx-auto px-6 py-24">
-        <h1 class="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 leading-tight">
+        <h1 class="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent leading-tight">
           釋放您的無限創造力
         </h1>
         <p class="mt-6 text-lg text-text/80 max-w-2xl mx-auto">
@@ -18,7 +18,7 @@
       <section v-for="img in images" class=" group container mx-auto px-6 py-20">
         <div class="md:flex items-center justify-center gap-12">
           <div class="md:w-1/2 group-odd:order-1 mb-4 md:mb-0">
-            <h2 class="text-3xl font-bold mb-4">{{ img.title }}</h2>
+            <h2 class="text-3xl font-bold mb-4 text-primary">{{ img.title }}</h2>
             <p class=" text-text/80 leading-relaxed">{{ img.description }}</p>
           </div>
           <div class="md:w-1/2 bg-background/50 p-4 rounded-xl border border-text/10 shadow-lg backdrop-blur-lg">

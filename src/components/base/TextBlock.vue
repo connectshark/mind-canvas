@@ -1,5 +1,5 @@
 <template>
-  <p class=" prose prose-invert" v-html="md.render(content)"></p>
+  <p class="prose dark:prose-invert" v-html="md.render(content)"></p>
 </template>
 
 <script setup>
