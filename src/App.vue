@@ -18,7 +18,7 @@
       </nav>
       <div class="md:hidden">
         <button @click="isMenuOpen = !isMenuOpen" class="text-sm cursor-pointer text-text/80 hover:text-text transition-colors">
-          <i class='bx bx-md bx-menu-alt-right'></i>
+          <i class='bx bx-sm bx-menu'  ></i> 
         </button>
       </div>
     </div>
